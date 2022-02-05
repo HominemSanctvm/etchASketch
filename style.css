@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+	background-image: url('https://background-tiles.com/overview/red/textures/large/5010.png');
+	font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 48px;
+	color: white;
+	text-shadow: black 0px 0px 5px;
+}
+
+#container {
+	display: grid;
+	width: fit-content;
+       	grid-template-columns: repeat(16, 1fr);
+       	grid-template-rows: repeat(16, 1fr);
+	margin: 0 auto;
+}
+
+.gridItems {
+	width: 32px;
+	height: 32px;
+	border: 1px solid black;
+	background-color: white;
+	margin: 0;
+}
+
+/*.gridItems:hover {
+	background-color: blue;
+}*/
+
+#btnClear {
+}
