@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
-	background-image: url('https://background-tiles.com/overview/red/textures/large/5010.png');
+	background-image: url('https://background-tiles.com/overview/red/patterns/large/1033.gif');
 	font-family: 'Noto Sans', sans-serif;
 }
 
@@ -12,15 +12,16 @@ h1 {
 	text-shadow: black 0px 0px 5px;
 }
 
-#container {
+#grid-container {
 	display: grid;
-	width: fit-content;
+	width: 512px;
        	grid-template-columns: repeat(16, 1fr);
        	grid-template-rows: repeat(16, 1fr);
 	margin: 0 auto;
 }
 
 .gridItems {
+	box-sizing: border-box;
 	width: 32px;
 	height: 32px;
 	border: 1px solid black;
@@ -32,5 +33,28 @@ h1 {
 	background-color: blue;
 }*/
 
+#div-settings {
+	display: flex;
+	justify-content: center;
+	width: 512px;
+	height: 48px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
 #btnClear {
+	background-color: white;
+
+}
+
+#btnColor {
+	background-color: white;
+}
+
+.buttons {
+	font-family: inherit;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
 }
