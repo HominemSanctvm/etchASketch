@@ -16,11 +16,34 @@ function paintTile(element, color) {
 
 createSquareGrids();
 
-let isDrawing = false;
 let colorPicked = '#000'
+let isDrawing = false;
+
 const gridItems = document.querySelectorAll('.gridItems');
 const btnColorPicker = document.getElementById('btnColorPicker');
+const rbColorMode = document.getElementById('rbColorMode');
+const rbRainbowMode = document.getElementById('rbRainbowMode');
+const rbEraserMode = document.getElementById('rbEraserMode');
 const btnClear = document.getElementById('btnClear');
+const btnSettings = document.querySelectorAll('.buttons-settings');
+
+rbColorMode.addEventListener('change', e => {
+
+    if(e.target.checked){
+	btnColorPicker.removeAttribute('disabled', '');
+	colorPicked = btnColorPicker.value;
+    }
+
+});
+
+rbEraserMode.addEventListener('change', e => {
+
+    if(e.target.checked){
+	btnColorPicker.setAttribute('disabled', '');
+	colorPicked = 'white';
+    }
+
+});
 
 gridItems.forEach((element)=> {
 	element.addEventListener('dragstart', (e) => {
@@ -62,4 +85,8 @@ btnClear.addEventListener('click', function () {
 	})
 })
 
+btnColorPicker.addEventListener('change', watchColorPicker);
 
+function watchColorPicker(event) {
+	colorPicked = btnColorPicker.value;
+}
